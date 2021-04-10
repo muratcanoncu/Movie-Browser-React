@@ -1,11 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
-//! http://www.omdbapi.com/?t=${movieName}&plot=full&apikey=1d8e5734
+import "bootstrap/dist/css/bootstrap.min.css";
+import { HashRouter, Switch, Route } from "react-router-dom";
+//Components
+import NavBar from "./Components/NavBar/NavBar";
+import SearchBar from "./Components/SearchBar/SearchBar";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">Test</header>
-    </div>
+    <HashRouter basename="/">
+      <div className="App">
+        <NavBar></NavBar>
+        <SearchBar></SearchBar>
+      </div>
+    </HashRouter>
   );
 }
 

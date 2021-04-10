@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* NavBar */
+nav {
+  background-color: black;
+  height: 80px;
+  padding-top: 7px;
+  box-shadow: 5px 15px 50px lightgrey;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav h1 {
+  color: #e50914;
+  font-weight: bold;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav h4 {
+  color: #e50914;
+  font-weight: bold;
+}
+nav h1:hover,
+h4:hover {
+  cursor: pointer;
+  color: tomato;
+  border-bottom: 3px solid white;
+}
+/* SearchBar */
+#searchBar {
+  background: url(./Components//SearchBar/BgSearch.jpeg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100vw 70vh;
+  height: 240px;
+  border: 1px solid black;
+}
+#searchBar input {
+  width: 550px;
+  height: 45px;
+  padding: 3px 6px;
+  border: 2px solid black;
+  outline: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+#searchBar button {
+  width: 190px;
+  height: 45px;
+  background: black;
+  color: #e50914;
+  font-weight: bold;
+  padding: 3px 6px;
+  border: none;
+}
+#searchBar button:hover {
+  background: #e50914;
   color: white;
 }
+/* movieContainer */
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* movieCard */
