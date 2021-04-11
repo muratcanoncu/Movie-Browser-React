@@ -57,4 +57,38 @@ h4:hover {
 }
 /* movieContainer */
 
+.movieContainer {
+  background-color: #0e1111;
+  width: 100vw;
+  min-height: 60vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px auto;
+}
 /* movieCard */
+.movieCard {
+  /* border: 1px solid white; */
+  cursor: pointer;
+  width: 350px;
+  height: 550px;
+  margin: 30px 50px;
+  box-shadow: 2px 6px 10px white;
+}
+.movieCard h3 {
+  background: #e50914;
+  color: black;
+  font-weight: bolder;
+}
+.movieCard:hover {
+  /* border: 2px solid white; */
+  box-shadow: 5px 12px 10px #e50914;
+  transition: 0.2s;
+}
+.movieCard:hover h3 {
+  transition: 0.3s;
+  background: white;
+  color: #e50914;
+}

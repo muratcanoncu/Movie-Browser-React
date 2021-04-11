@@ -4,8 +4,10 @@ import React, { useReducer, createContext, useEffect } from "react";
 const UserContext = createContext();
 const initialState = {
   loggedIn: false,
+  userName: "",
   movieData: [],
-  keyWord: "",
+  keyWord: "spiderman",
+  myList: [],
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -26,10 +28,18 @@ export function ContextProvider(props) {
     )
       .then((responseData) => responseData.json())
       .then((responseData) => {
-        dispatch({
-          type: "KEYWORD_UPDATED",
-          payload: responseData.results,
-        });
+        // console.log(responseData);
+        if (responseData.results) {
+          dispatch({
+            type: "KEYWORD_UPDATED",
+            payload: responseData.results,
+          });
+        } else {
+          dispatch({
+            type: "KEYWORD_UPDATED",
+            payload: [],
+          });
+        }
       });
   }, [state.keyWord]);
   return (

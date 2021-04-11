@@ -7,8 +7,6 @@ function SearchBar() {
     setKeyWord(keyWordUpdate);
     setKeyWordUpdate("");
   };
-  console.log(keyWordUpdate);
-  console.log(keyWord);
   return (
     <div
       id="searchBar"
