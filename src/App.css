@@ -8,7 +8,11 @@ nav {
   background-color: black;
   height: 80px;
   padding-top: 7px;
-  box-shadow: 5px 15px 50px lightgrey;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 3px 3px 15px white;
+  position: sticky;
+  top: 0;
 }
 nav h1 {
   color: #e50914;
@@ -61,13 +65,12 @@ h4:hover {
 .movieContainer {
   background-color: #0e1111;
   width: 100%;
-  min-height: 60vh;
+  min-height: 601px;
   height: auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  padding: 30px auto;
 }
 /* movieCard */
 .movieCard {
@@ -98,7 +101,19 @@ h4:hover {
 }
 .movieCard:active h3 {
   transition: 0.2s;
-  background: yellow;
-  border: 3px solid #e50914;
+  background: black;
   color: #e50914;
+}
+/* footer */
+.footer {
+  width: 100%;
+  background: black;
+  color: #e50914;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 55px;
+  position: sticky;
+  bottom: 0;
 }

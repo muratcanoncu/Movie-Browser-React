@@ -5,13 +5,16 @@ function MovieContainer() {
   const context = useContext(UserContext);
   // console.log(context.mainState.movieData);
   console.log(
-    context.mainState.fetched,
+    context.mainState.totalMovies,
     context.mainState.keyWord.length > 1,
     context.mainState.movieData.length == 0
   );
-  if (context.mainState.movieData.length > 0 && context.mainState.fetched) {
+  if (
+    context.mainState.movieData.length > 0 &&
+    context.mainState.totalMovies > 0
+  ) {
     return (
-      <div className="movieContainer">
+      <div className="movieContainer py-5">
         {context.mainState.movieData.map((movie) => {
           if (movie.poster_path) {
             return (
@@ -28,7 +31,7 @@ function MovieContainer() {
       </div>
     );
   } else if (
-    !context.mainState.fetched &&
+    context.mainState.totalMovies == 0 &&
     context.mainState.keyWord.length > 1 &&
     context.mainState.movieData.length == 0
   ) {

@@ -7,7 +7,7 @@ const initialState = {
   userName: "",
   movieData: [],
   keyWord: "",
-  fetched: false,
+  totalMovies: 0,
   myList: [],
 };
 const reducer = (state, action) => {
@@ -15,7 +15,7 @@ const reducer = (state, action) => {
     case "KEYWORD_UPDATED":
       return {
         ...state,
-        fetched: action.fetched,
+        totalMovies: action.total_pages,
         movieData: action.payload,
       };
     case "NEW_KEYWORD":
@@ -41,13 +41,13 @@ export function ContextProvider(props) {
           dispatch({
             type: "KEYWORD_UPDATED",
             payload: responseData.results,
-            fetched: true,
+            total_pages: responseData.total_pages,
           });
         } else {
           dispatch({
             type: "KEYWORD_UPDATED",
             payload: [],
-            fetched: false,
+            total_pages: responseData.total_pages,
           });
         }
       });
