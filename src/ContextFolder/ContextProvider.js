@@ -6,7 +6,8 @@ const initialState = {
   loggedIn: false,
   userName: "",
   movieData: [],
-  keyWord: "spiderman",
+  keyWord: "",
+  fetched: false,
   myList: [],
 };
 const reducer = (state, action) => {
@@ -14,8 +15,15 @@ const reducer = (state, action) => {
     case "KEYWORD_UPDATED":
       return {
         ...state,
+        fetched: action.fetched,
         movieData: action.payload,
       };
+    case "NEW_KEYWORD":
+      return {
+        ...state,
+        keyWord: action.payload,
+      };
+
     default:
       return state;
   }
@@ -28,16 +36,18 @@ export function ContextProvider(props) {
     )
       .then((responseData) => responseData.json())
       .then((responseData) => {
-        // console.log(responseData);
-        if (responseData.results) {
+        // console.log(responseData.total_pages > 0);
+        if (responseData.total_pages > 0) {
           dispatch({
             type: "KEYWORD_UPDATED",
             payload: responseData.results,
+            fetched: true,
           });
         } else {
           dispatch({
             type: "KEYWORD_UPDATED",
             payload: [],
+            fetched: false,
           });
         }
       });

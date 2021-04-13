@@ -26,12 +26,13 @@ h4:hover {
 }
 /* SearchBar */
 #searchBar {
+  width: 100vw;
   background: url(./Components//SearchBar/BgSearch.jpeg);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100vw 70vh;
+  background-size: 100% 70vh;
   height: 240px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 #searchBar input {
   width: 550px;
@@ -59,7 +60,7 @@ h4:hover {
 
 .movieContainer {
   background-color: #0e1111;
-  width: 100vw;
+  width: 100%;
   min-height: 60vh;
   height: auto;
   display: flex;
@@ -72,8 +73,8 @@ h4:hover {
 .movieCard {
   /* border: 1px solid white; */
   cursor: pointer;
-  width: 350px;
-  height: 550px;
+  width: 330px;
+  height: 470px;
   margin: 30px 50px;
   box-shadow: 2px 6px 10px white;
 }
@@ -87,8 +88,17 @@ h4:hover {
   box-shadow: 5px 12px 10px #e50914;
   transition: 0.2s;
 }
+.movieCard:active {
+  box-shadow: 5px 12px 10px yellow;
+}
 .movieCard:hover h3 {
   transition: 0.3s;
   background: white;
+  color: #e50914;
+}
+.movieCard:active h3 {
+  transition: 0.2s;
+  background: yellow;
+  border: 3px solid #e50914;
   color: #e50914;
 }
