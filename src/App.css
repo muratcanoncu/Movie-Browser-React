@@ -79,27 +79,27 @@ h4:hover {
   width: 330px;
   height: 470px;
   margin: 30px 50px;
-  box-shadow: 2px 6px 10px white;
+  box-shadow: 2px 4px 5px white;
 }
-.movieCard h3 {
+.movieCard h5 {
   background: #e50914;
   color: black;
   font-weight: bolder;
 }
 .movieCard:hover {
   /* border: 2px solid white; */
-  box-shadow: 5px 12px 10px #e50914;
-  transition: 0.2s;
+  box-shadow: 5px 12px 10px white;
+  transition: 0.5s;
 }
 .movieCard:active {
   box-shadow: 5px 12px 10px yellow;
 }
-.movieCard:hover h3 {
+.movieCard:hover h5 {
   transition: 0.3s;
-  background: white;
-  color: #e50914;
+  /* background: black; */
+  color: white;
 }
-.movieCard:active h3 {
+.movieCard:active h5 {
   transition: 0.2s;
   background: black;
   color: #e50914;

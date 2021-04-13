@@ -8,14 +8,14 @@ function MovieCard(props) {
       <img
         src={`https://image.tmdb.org/t/p/w200/${props.poster}`}
         className="w-100"
-        style={{ height: "85%" }}
+        style={{ height: "87%" }}
       ></img>
-      <h3
+      <h5
         className="d-flex justify-content-center align-items-center text-center"
-        style={{ height: "15%" }}
+        style={{ height: "13%" }}
       >
         {props.movieName}
-      </h3>
+      </h5>
     </div>
   );
 }

@@ -11,8 +11,13 @@ function App() {
     <HashRouter basename="/">
       <div className="App">
         <NavBar></NavBar>
-        <SearchBar></SearchBar>
-        <MovieContainer></MovieContainer>
+        <Switch>
+          <Route path="/">
+            <SearchBar></SearchBar>
+            <MovieContainer></MovieContainer>
+          </Route>
+        </Switch>
+
         <Footer></Footer>
       </div>
     </HashRouter>
