@@ -11,6 +11,9 @@ import MovieContainer from "./Components/MovieContainer/MovieContainer";
 import Footer from "./Components/Footer/Footer";
 import Loading from "./Components/LoadingPage/LoadingPage";
 import Login from "./Components/Login/Login";
+import UserProfile from "./Components/Profile/Profile";
+import AboutUs from "./Components/AboutUs/AboutUs";
+import MyList from "./Components/MyList/MyListContainer";
 function App() {
   const context = useContext(UserContext);
   if (!context.mainState.loaded) {
@@ -36,9 +39,15 @@ function App() {
                 <SearchBar></SearchBar>
                 <MovieContainer></MovieContainer>
               </Route>
-              <Route path="/profile"></Route>
-              <Route path="/mylist"></Route>
-              <Route path="/aboutus"></Route>
+              <Route path="/profile">
+                <UserProfile></UserProfile>
+              </Route>
+              <Route path="/mylist">
+                <MyList></MyList>
+              </Route>
+              <Route path="/aboutus">
+                <AboutUs></AboutUs>
+              </Route>
             </Switch>
 
             <Footer></Footer>

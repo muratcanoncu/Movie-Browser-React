@@ -14,7 +14,6 @@ function NavBar() {
       <NavLink to="/" replace>
         <h1>FETCHFLIX</h1>
       </NavLink>
-
       <div className=" middleMenu d-flex justify-content-between w-25">
         <NavLink to="/profile" replace>
           <h4>Profile</h4>
