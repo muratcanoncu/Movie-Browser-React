@@ -29,6 +29,18 @@ const reducer = (state, action) => {
         ...state,
         loaded: true,
       };
+    case "USER_LOGIN":
+      return {
+        ...state,
+        loggedIn: true,
+      };
+    case "USER_SIGNOUT":
+      return {
+        ...state,
+        loggedIn: false,
+        myList: [],
+        keyWord: "",
+      };
 
     default:
       return state;
@@ -42,9 +54,8 @@ export function ContextProvider(props) {
       dispatch({
         type: "PAGE_LOADED",
       });
-    }, 2000);
+    }, 500);
   }, []);
-
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=4ff32b3a95fabacb861ecfa8aa1dfcba&query=${state.keyWord}`

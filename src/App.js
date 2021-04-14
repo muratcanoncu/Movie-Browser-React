@@ -10,9 +10,10 @@ import SearchBar from "./Components/SearchBar/SearchBar";
 import MovieContainer from "./Components/MovieContainer/MovieContainer";
 import Footer from "./Components/Footer/Footer";
 import Loading from "./Components/LoadingPage/LoadingPage";
+import Login from "./Components/Login/Login";
 function App() {
   const context = useContext(UserContext);
-  console.log(context.mainState.loaded);
+  console.log(context.mainState.loggedIn);
   return (
     <HashRouter basename="/">
       {!context.mainState.loaded ? (
