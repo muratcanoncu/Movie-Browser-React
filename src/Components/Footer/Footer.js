@@ -1,5 +1,3 @@
-import React from "react";
-
 function Footer() {
   return (
     <div className="footer">
@@ -10,7 +8,9 @@ function Footer() {
       <div>
         <h2>FETCHFLIX</h2>
       </div>
-      <div>c</div>
+      <div>
+        <a href="#">Contact Us</a>
+      </div>
     </div>
   );
 }

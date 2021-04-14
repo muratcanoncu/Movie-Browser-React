@@ -117,3 +117,9 @@ h4:hover {
   position: sticky;
   bottom: 0;
 }
+.footer a {
+  color: grey;
+}
+.footer a:hover {
+  color: grey;
+}

@@ -3,6 +3,7 @@ import React, { useReducer, createContext, useEffect } from "react";
 //! https://image.tmdb.org/t/p/w200/${posterPath}
 const UserContext = createContext();
 const initialState = {
+  loaded: false,
   loggedIn: false,
   userName: "",
   movieData: [],
@@ -23,6 +24,11 @@ const reducer = (state, action) => {
         ...state,
         keyWord: action.payload,
       };
+    case "PAGE_LOADED":
+      return {
+        ...state,
+        loaded: true,
+      };
 
     default:
       return state;
@@ -30,6 +36,15 @@ const reducer = (state, action) => {
 };
 export function ContextProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch({
+        type: "PAGE_LOADED",
+      });
+    }, 2000);
+  }, []);
+
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=4ff32b3a95fabacb861ecfa8aa1dfcba&query=${state.keyWord}`

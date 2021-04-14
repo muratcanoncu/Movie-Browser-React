@@ -4,11 +4,11 @@ import MovieCard from "./MovieCards/MovieCard";
 function MovieContainer() {
   const context = useContext(UserContext);
   // console.log(context.mainState.movieData);
-  console.log(
-    context.mainState.totalMovies,
-    context.mainState.keyWord.length > 1,
-    context.mainState.movieData.length == 0
-  );
+  // console.log(
+  //   context.mainState.totalMovies,
+  //   context.mainState.keyWord.length > 1,
+  //   context.mainState.movieData.length == 0
+  // );
   if (
     context.mainState.movieData.length > 0 &&
     context.mainState.totalMovies > 0
@@ -39,9 +39,11 @@ function MovieContainer() {
       <div className="movieContainer">
         <p
           style={{
-            color: "red",
+            color: "#e50914",
             fontSize: "3rem",
             marginBottom: "370px",
+            width: "400px",
+            textAlign: "center",
           }}
         >
           Movie not found!
@@ -49,7 +51,22 @@ function MovieContainer() {
       </div>
     );
   } else {
-    return <div className="movieContainer"></div>;
+    return (
+      <div className="movieContainer">
+        <p
+          style={{
+            color: "white",
+            textShadow: "5px 5px 10px #e50914",
+            fontSize: "2.2rem",
+            marginBottom: "370px",
+            width: "400px",
+            textAlign: "center",
+          }}
+        >
+          Please enter a movie name into the search bar
+        </p>
+      </div>
+    );
   }
 }
 

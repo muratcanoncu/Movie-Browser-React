@@ -25,6 +25,7 @@ function SearchBar() {
     >
       <input
         type="text"
+        placeholder="Movie name . . ."
         value={keyWordUpdate}
         onChange={(e) => setKeyWordUpdate(e.target.value)}
       ></input>
