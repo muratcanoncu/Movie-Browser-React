@@ -3,12 +3,6 @@ import UserContext from "../../ContextFolder/ContextProvider";
 import MovieCard from "./MovieCards/MovieCard";
 function MovieContainer() {
   const context = useContext(UserContext);
-  // console.log(context.mainState.movieData);
-  // console.log(
-  //   context.mainState.totalMovies,
-  //   context.mainState.keyWord.length > 1,
-  //   context.mainState.movieData.length == 0
-  // );
   if (
     context.mainState.movieData.length > 0 &&
     context.mainState.totalMovies > 0
@@ -32,8 +26,7 @@ function MovieContainer() {
     );
   } else if (
     context.mainState.totalMovies == 0 &&
-    context.mainState.keyWord.length > 1 &&
-    context.mainState.movieData.length == 0
+    context.mainState.keyWord.length > 1
   ) {
     return (
       <div className="movieContainer">

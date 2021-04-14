@@ -13,28 +13,40 @@ import Loading from "./Components/LoadingPage/LoadingPage";
 import Login from "./Components/Login/Login";
 function App() {
   const context = useContext(UserContext);
-  console.log(context.mainState.loggedIn);
-  return (
-    <HashRouter basename="/">
-      {!context.mainState.loaded ? (
+  if (!context.mainState.loaded) {
+    return (
+      <div className="App">
+        <Loading></Loading>
+      </div>
+    );
+  } else {
+    if (!context.mainState.loggedIn) {
+      return (
         <div className="App">
-          <Loading></Loading>
+          <Login></Login>
         </div>
-      ) : (
-        <div className="App">
-          <NavBar></NavBar>
-          <Switch>
-            <Route path="/">
-              <SearchBar></SearchBar>
-              <MovieContainer></MovieContainer>
-            </Route>
-          </Switch>
+      );
+    } else {
+      return (
+        <HashRouter basename="/">
+          <div className="App">
+            <NavBar></NavBar>
+            <Switch>
+              <Route path="/" exact>
+                <SearchBar></SearchBar>
+                <MovieContainer></MovieContainer>
+              </Route>
+              <Route path="/profile"></Route>
+              <Route path="/mylist"></Route>
+              <Route path="/aboutus"></Route>
+            </Switch>
 
-          <Footer></Footer>
-        </div>
-      )}
-    </HashRouter>
-  );
+            <Footer></Footer>
+          </div>
+        </HashRouter>
+      );
+    }
+  }
 }
 
 export default App;

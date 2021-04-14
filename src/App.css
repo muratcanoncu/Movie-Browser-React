@@ -14,16 +14,29 @@ nav {
   position: sticky;
   top: 0;
 }
-nav h1 {
+nav h1,
+.signOut {
   color: #e50914;
   font-weight: bold;
 }
-nav h4 {
+nav a:hover {
+  text-decoration: none;
+}
+nav h1:hover {
+  cursor: pointer;
+  color: tomato;
+}
+nav .signOut:hover {
+  cursor: pointer;
+  color: tomato;
+  border-bottom: 3px solid white;
+}
+.middleMenu h4 {
   color: #e50914;
   font-weight: bold;
+  margin-bottom: 0;
 }
-nav h1:hover,
-h4:hover {
+.middleMenu h4:hover {
   cursor: pointer;
   color: tomato;
   border-bottom: 3px solid white;
@@ -60,8 +73,73 @@ h4:hover {
   background: #e50914;
   color: white;
 }
+/* login */
+.login {
+  width: 100%;
+  height: 100vh;
+  background: black;
+}
+.loginBox {
+  width: 400px;
+  height: 260px;
+  border: 3px solid #e50914;
+  background: #0e1111;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+.loginBox div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.loginBox div input {
+  border: none;
+  border-radius: 15px;
+  padding: 3px 15px;
+  width: 100%;
+  height: 35px;
+  outline: red;
+  margin-bottom: 10px;
+  color: #e50914;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+.loginBox div input:invalid {
+  border: 2px solid #e50914;
+}
+.loginBox div label {
+  margin: 0;
+  color: #e50914;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.loginBox button {
+  width: 60%;
+  margin: 20px auto;
+  border: none;
+  border-radius: 15px;
+  height: 33px;
+  font-weight: bolder;
+  background: #e50914;
+  color: white;
+}
+.loginBox button:hover {
+  color: black;
+  background: grey;
+}
+.loginBox button:active {
+  color: #e50914;
+  background: white;
+}
 /* movieContainer */
-
 .movieContainer {
   background-color: #0e1111;
   width: 100%;
@@ -104,6 +182,7 @@ h4:hover {
   background: black;
   color: #e50914;
 }
+
 /* footer */
 .footer {
   width: 100%;

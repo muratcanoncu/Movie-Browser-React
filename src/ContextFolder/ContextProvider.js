@@ -10,6 +10,7 @@ const initialState = {
   keyWord: "",
   totalMovies: 0,
   myList: [],
+  userInfo: { userName: "", password: "" },
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -33,6 +34,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         loggedIn: true,
+        userInfo: action.payload,
       };
     case "USER_SIGNOUT":
       return {
@@ -40,6 +42,12 @@ const reducer = (state, action) => {
         loggedIn: false,
         myList: [],
         keyWord: "",
+        userInfo: { userName: "", password: "" },
+      };
+    case "ADD_MYLIST":
+      return {
+        ...state,
+        myList: [...state.myList, action.payload],
       };
 
     default:
@@ -54,7 +62,7 @@ export function ContextProvider(props) {
       dispatch({
         type: "PAGE_LOADED",
       });
-    }, 500);
+    }, 300);
   }, []);
   useEffect(() => {
     fetch(

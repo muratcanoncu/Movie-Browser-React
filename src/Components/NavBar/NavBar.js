@@ -1,14 +1,37 @@
-import React from "react";
+import { useContext } from "react";
+import UserContext from "../../ContextFolder/ContextProvider";
+import { NavLink } from "react-router-dom";
+
 function NavBar() {
+  const context = useContext(UserContext);
+  const signOutHandler = (dispatch) => {
+    dispatch({
+      type: "USER_SIGNOUT",
+    });
+  };
   return (
     <nav className="d-flex justify-content-between align-items-center w-100">
-      <h1>FETCHFLIX</h1>
-      <div className="d-flex justify-content-between w-25">
-        <h4>Profile</h4>
-        <h4>My List</h4>
-        <h4>About Us</h4>
+      <NavLink to="/" replace>
+        <h1>FETCHFLIX</h1>
+      </NavLink>
+
+      <div className=" middleMenu d-flex justify-content-between w-25">
+        <NavLink to="/profile" replace>
+          <h4>Profile</h4>
+        </NavLink>
+        <NavLink to="mylist" replace>
+          <h4>My List</h4>
+        </NavLink>
+        <NavLink to="/aboutus" replace>
+          <h4>About Us</h4>
+        </NavLink>
       </div>
-      <h4>Sign Out</h4>
+      <h4
+        className="signOut"
+        onClick={() => signOutHandler(context.myDispatch)}
+      >
+        Sign Out
+      </h4>
     </nav>
   );
 }

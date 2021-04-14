@@ -10,13 +10,13 @@ function LoadingPage() {
         style={{
           color: "#e50914",
           fontWeight: "bolder",
-          marginBottom: "100px",
+          marginBottom: "200px",
           fontSize: "3.7rem",
         }}
       >
         FETCHFLIX
       </h1>
-      <h2 style={{ color: "#e50914" }}>Loading . . .</h2>
+      <h2 style={{ color: "#e50914", marginBottom: "300px" }}>Loading . . .</h2>
     </div>
   );
 }
