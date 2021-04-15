@@ -15,17 +15,10 @@ function Login() {
   };
   return (
     <div className="login d-flex justify-content-center align-items-center flex-column">
-      <h1
-        style={{
-          color: "#e50914",
-          marginBottom: "100px",
-          width: "370px",
-          textAlign: "center",
-          fontSize: "3.4rem",
-        }}
-      >
+      <h1 className="welcomeToFetchflix">
         Welcome to <span style={{ fontSize: "4.2rem" }}>FETCHFLIX</span>
       </h1>
+      <p className="inform">Please Enter Username and Password</p>
       <div className="loginBox">
         <div>
           <label htmlFor="userName">USERNAME</label>

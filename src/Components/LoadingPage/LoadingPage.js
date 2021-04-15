@@ -16,7 +16,13 @@ function LoadingPage() {
       >
         FETCHFLIX
       </h1>
-      <h2 style={{ color: "#e50914", marginBottom: "300px" }}>Loading . . .</h2>
+      <h2
+        className="loading"
+        style={{ color: "#e50914", marginBottom: "300px" }}
+      >
+        Loading <span className="dot1">.</span> <span className="dot2">.</span>{" "}
+        <span className="dot3">.</span>
+      </h2>
     </div>
   );
 }

@@ -62,7 +62,7 @@ export function ContextProvider(props) {
       dispatch({
         type: "PAGE_LOADED",
       });
-    }, 300);
+    }, 1000);
   }, []);
   useEffect(() => {
     fetch(
