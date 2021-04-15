@@ -288,28 +288,41 @@ h2 .dot3 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 60px;
-  padding-top: 70px;
+  padding-bottom: 90px;
+  padding-top: 60px;
   color: white;
 }
 .aboutUs h1 {
   color: #e50914;
-  font-size: 4.4rem;
+  font-size: 4.3rem;
 }
 .aboutUs p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   width: 55%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .aboutUs .container {
   height: 250px;
   text-align: center;
 }
 .container p {
-  width: 100%;
+  width: 50%;
 }
 .container p b {
   color: #e50914;
+}
+.teamPlayers {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+}
+.teamPlayers img {
+  width: 110px;
+  height: 110px;
+  box-shadow: 2px 2px 5px #e50914;
+  border-radius: 15px;
 }
 /* my List */
 .myList {

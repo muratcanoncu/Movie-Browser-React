@@ -1,5 +1,6 @@
-import React from "react";
-
+import ElonMusk from "./img/ElonMusk.jpg";
+import BillGates from "./img/BillGates.jpg";
+import JeffBezos from "./img/JeffBezos.jpg";
 function AboutUs() {
   return (
     <div className="aboutUs">
@@ -22,24 +23,36 @@ function AboutUs() {
       </p>
       <div className="container">
         <div className="row">
-          <div className="col-sm-12 mb-4">
+          <div className="col-sm-12 mb-3">
             <h2 style={{ borderBottom: "4px solid #e50914" }}>Our Team</h2>
           </div>
-          <div className="col-sm-12 col-md-5 mx-auto">
-            <p>
-              <b>Co-Founder:</b> Murat Can Öncü
-            </p>
-            <p>
-              <b>Investor:</b> Steve Jobs
-            </p>
+          <div className="col-sm-12 col-md-6 mx-auto">
+            <div className="teamPlayers">
+              <p className="d-flex flex-column">
+                <b>Co-Founder:</b> Murat Can Öncü
+              </p>
+            </div>
+            <div className="teamPlayers">
+              <p className="d-flex flex-column">
+                <b>Investor:</b> Bill Gates
+              </p>
+              <img src={BillGates}></img>
+            </div>
           </div>
-          <div className="col-sm-12 col-md-5 mx-auto">
-            <p>
-              <b>Software Developer:</b> Elon Musk
-            </p>
-            <p>
-              <b>Operation Manager:</b> Jeff Bezos
-            </p>
+          <div className="col-sm-12 col-md-6 mx-auto">
+            <div className="teamPlayers">
+              <p className="d-flex flex-column">
+                <b>Software Developer:</b> Elon Musk
+              </p>
+              <img src={ElonMusk}></img>
+            </div>
+
+            <div className="teamPlayers">
+              <p className="d-flex flex-column">
+                <b>Operation Manager:</b> Jeff Bezos
+              </p>
+              <img src={JeffBezos}></img>
+            </div>
           </div>
         </div>
       </div>
