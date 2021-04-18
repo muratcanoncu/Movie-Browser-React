@@ -1,6 +1,7 @@
 import ElonMusk from "./img/ElonMusk.jpg";
 import BillGates from "./img/BillGates.jpg";
 import JeffBezos from "./img/JeffBezos.jpg";
+import RyanReynolds from "./img/ryanReynolds.jpg";
 function AboutUs() {
   return (
     <div className="aboutUs">
@@ -29,12 +30,13 @@ function AboutUs() {
           <div className="col-sm-12 col-md-6 mx-auto">
             <div className="teamPlayers">
               <p className="d-flex flex-column">
-                <b>Co-Founder:</b> Murat Can Öncü
+                <b>Co-Founder:</b> Ryan Reynolds
               </p>
+              <img src={RyanReynolds}></img>
             </div>
             <div className="teamPlayers">
               <p className="d-flex flex-column">
-                <b>Investor:</b> Bill Gates
+                <b>Chef Executive Officer:</b> Bill Gates
               </p>
               <img src={BillGates}></img>
             </div>
@@ -42,14 +44,14 @@ function AboutUs() {
           <div className="col-sm-12 col-md-6 mx-auto">
             <div className="teamPlayers">
               <p className="d-flex flex-column">
-                <b>Software Developer:</b> Elon Musk
+                <b>Developer Team Lead:</b> Elon Musk
               </p>
               <img src={ElonMusk}></img>
             </div>
 
             <div className="teamPlayers">
               <p className="d-flex flex-column">
-                <b>Operation Manager:</b> Jeff Bezos
+                <b>Operations Manager:</b> Jeff Bezos
               </p>
               <img src={JeffBezos}></img>
             </div>

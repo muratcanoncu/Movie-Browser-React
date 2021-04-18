@@ -19,9 +19,13 @@ function SearchBar() {
   };
 
   return (
-    <div
+    <form
       id="searchBar"
       className="d-flex justify-content-center align-items-center w-100"
+      onSubmit={(e) => {
+        e.preventDefault();
+        return sendKeyWord(context.myDispatch);
+      }}
     >
       <input
         type="text"
@@ -29,8 +33,8 @@ function SearchBar() {
         value={keyWordUpdate}
         onChange={(e) => setKeyWordUpdate(e.target.value)}
       ></input>
-      <button onClick={() => sendKeyWord(context.myDispatch)}>SEARCH</button>
-    </div>
+      <button>SEARCH</button>
+    </form>
   );
 }
 

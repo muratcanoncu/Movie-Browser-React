@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* NavBar */
 nav {
   background-color: black;
@@ -317,12 +318,13 @@ h2 .dot3 {
   align-items: center;
   justify-content: center;
   height: 130px;
+  text-align: left;
 }
 .teamPlayers img {
   width: 110px;
   height: 110px;
-  box-shadow: 2px 2px 5px #e50914;
-  border-radius: 15px;
+  border: 2px solid #e50914;
+  border-radius: 50%;
 }
 /* my List */
 .myList {
