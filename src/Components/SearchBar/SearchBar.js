@@ -3,13 +3,6 @@ import UserContext from "../../ContextFolder/ContextProvider";
 function SearchBar() {
   const context = useContext(UserContext);
   const [keyWordUpdate, setKeyWordUpdate] = useState("");
-  // const [keyWord, setKeyWord] = useState("");
-  // const setNewKeyWord = () => {
-  //   setKeyWord(keyWordUpdate);
-  //   setKeyWordUpdate("");
-  // };
-
-  // console.log(keyWordUpdate, keyWord);
   const sendKeyWord = (dispatch) => {
     dispatch({
       type: "NEW_KEYWORD",

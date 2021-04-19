@@ -278,6 +278,15 @@ h2 .dot3 {
   background: #0e1111;
   width: 100%;
   height: 841px;
+  color: white;
+}
+.userProfile h1 {
+  /* padding-top: 5%;
+  padding-left: 10%; */
+  padding: 4% 10%;
+}
+.userProfile h3 {
+  padding-left: 7%;
 }
 /* About us */
 .aboutUs {

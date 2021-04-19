@@ -5,7 +5,6 @@ const UserContext = createContext();
 const initialState = {
   loaded: false,
   loggedIn: false,
-  userName: "",
   movieData: [],
   keyWord: "",
   totalMovies: 0,
