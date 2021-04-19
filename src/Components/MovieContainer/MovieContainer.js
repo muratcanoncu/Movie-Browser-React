@@ -14,6 +14,7 @@ function MovieContainer() {
             return (
               <MovieCard
                 key={movie.id}
+                id={movie.id}
                 poster={movie.poster_path}
                 movieName={movie.original_title}
                 plot={movie.overview}

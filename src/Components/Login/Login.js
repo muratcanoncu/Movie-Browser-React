@@ -20,7 +20,12 @@ function Login() {
       </h1>
       <p className="inform">Please Enter Username and Password</p>
       <div className="loginBox">
-        <div>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            loginHandler(context.myDispatch);
+          }}
+        >
           <label htmlFor="userName">USERNAME</label>
           <input
             id="userName"
@@ -43,8 +48,8 @@ function Login() {
             }
             placeholder="Password must be at least 6 character"
           ></input>
-        </div>
-        <button onClick={() => loginHandler(context.myDispatch)}>LOGIN</button>
+          <button>LOGIN</button>
+        </form>
       </div>
     </div>
   );

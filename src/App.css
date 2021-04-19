@@ -182,15 +182,15 @@ h2 .dot3 {
   justify-content: center;
   margin-top: 40px;
 }
-.loginBox div {
+.loginBox form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 90%;
-  height: 150px;
-  margin-bottom: 10px;
+  height: 210px;
+  margin-bottom: 40px;
 }
-.loginBox div input {
+.loginBox form input {
   border: none;
   border-radius: 15px;
   padding: 3px 15px;
@@ -202,22 +202,22 @@ h2 .dot3 {
   font-weight: bolder;
   font-size: 1.1rem;
 }
-.loginBox div input:invalid {
+.loginBox form input:invalid {
   border: 2px solid #e50914;
 }
-.loginBox div label {
+.loginBox form label {
   margin: 0;
   color: #e50914;
   font-weight: bolder;
   text-align: center;
   font-size: 1.3rem;
 }
-.loginBox button {
+.loginBox form button {
   width: 60%;
-  margin: 20px auto;
+  margin: 10px auto;
   border: none;
   border-radius: 15px;
-  height: 33px;
+  height: 35px !important;
   font-weight: bolder;
   background: #e50914;
   color: white;

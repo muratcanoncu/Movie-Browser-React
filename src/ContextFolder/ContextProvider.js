@@ -8,8 +8,7 @@ const initialState = {
   movieData: [],
   keyWord: "",
   totalMovies: 0,
-  myList: [],
-  userInfo: { userName: "", password: "" },
+  userInfo: { userName: "", password: "", myList: [] },
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -33,20 +32,27 @@ const reducer = (state, action) => {
       return {
         ...state,
         loggedIn: true,
-        userInfo: action.payload,
+        userInfo: { ...action.payload, myList: [] },
       };
     case "USER_SIGNOUT":
       return {
         ...state,
         loggedIn: false,
-        myList: [],
         keyWord: "",
-        userInfo: { userName: "", password: "" },
+        userInfo: { userName: "", password: "", myList: [] },
       };
     case "ADD_MYLIST":
+      const selectedMovie = state.movieData.filter((movie) => {
+        return movie.id === action.payload;
+      });
+      console.log(selectedMovie);
+      let newUserInfo = { ...state.userInfo };
+      console.log(newUserInfo);
+      newUserInfo.myList = [...newUserInfo.myList, selectedMovie];
+      console.log(newUserInfo);
       return {
         ...state,
-        myList: [...state.myList, action.payload],
+        userInfo: newUserInfo,
       };
 
     default:
