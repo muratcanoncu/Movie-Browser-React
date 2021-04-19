@@ -1,9 +1,11 @@
-import React from "react";
-
+import { useContext } from "react";
+import UserContext from "../../ContextFolder/ContextProvider";
+import MovieCard from "./MyListCard/MyListCard";
 function AboutUs() {
+  const context = useContext(UserContext);
   return (
     <div className="myList">
-      <h1>Your Favorites:</h1>
+      <h1 className="mb-3">Your Favorite Movies:</h1>
       <div
         style={{
           borderBottom: "2px solid white",
@@ -11,17 +13,20 @@ function AboutUs() {
           margin: "5px auto",
         }}
       ></div>
-      {context.mainState.userInfo.myList.map((movie) => {
-        return (
-          <MovieCard
-            key={movie.id}
-            poster={movie.poster_path}
-            movieName={movie.original_title}
-            plot={movie.overview}
-            rate={movie.vote_average}
-          ></MovieCard>
-        );
-      })}
+      <div className="favListContainer">
+        {context.mainState.userInfo.myList.map((movie) => {
+          console.log(movie);
+          return (
+            <MovieCard
+              key={movie.id}
+              poster={movie.poster_path}
+              movieName={movie.original_title}
+              plot={movie.overview}
+              rate={movie.vote_average}
+            ></MovieCard>
+          );
+        })}
+      </div>
     </div>
   );
 }

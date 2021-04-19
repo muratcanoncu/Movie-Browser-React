@@ -45,10 +45,10 @@ const reducer = (state, action) => {
       const selectedMovie = state.movieData.filter((movie) => {
         return movie.id === action.payload;
       });
-      console.log(selectedMovie);
+      console.log(selectedMovie[0]);
       let newUserInfo = { ...state.userInfo };
       console.log(newUserInfo);
-      newUserInfo.myList = [...newUserInfo.myList, selectedMovie];
+      newUserInfo.myList = [...newUserInfo.myList, selectedMovie[0]];
       console.log(newUserInfo);
       return {
         ...state,

@@ -339,7 +339,21 @@ h2 .dot3 {
 .myList {
   background: #0e1111;
   width: 100%;
-  height: 841px;
+  min-height: 841px;
+  height: auto;
+  color: white;
+}
+.myList .favListContainer {
+  margin: 10px auto;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.myList h1 {
+  padding-left: 11%;
+  padding-top: 5%;
 }
 /* footer */
 .footer {

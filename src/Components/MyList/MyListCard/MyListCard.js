@@ -2,7 +2,7 @@ import { useContext } from "react";
 import UserContext from "../../../ContextFolder/ContextProvider";
 function MovieCard(props) {
   const context = useContext(UserContext);
-  console.log(context);
+  //   console.log(context);
   return (
     <div className="movieCard">
       <img
