@@ -1,5 +1,5 @@
 # FETCHFLIX
 
-###movie Browsing app
+### Movie Browsing app
 
 ## React,Bootstrap,ContextAPI,FetchAPI,React Router DOM
