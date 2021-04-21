@@ -8,7 +8,7 @@ const initialState = {
   movieData: [],
   keyWord: "",
   totalMovies: 0,
-  userInfo: { userName: "", password: "", myList: [] },
+  userInfo: { userName: "", password: "", myList: [], userSuggestions: [] },
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -32,7 +32,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         loggedIn: true,
-        userInfo: { ...action.payload, myList: [] },
+        userInfo: {
+          ...action.payload,
+          myList: [],
+          userSuggestions: state.userInfo.userSuggestions,
+        },
       };
     case "USER_SIGNOUT":
       return {
@@ -47,14 +51,25 @@ const reducer = (state, action) => {
       });
       console.log(selectedMovie[0]);
       let newUserInfo = { ...state.userInfo };
-      console.log(newUserInfo);
       newUserInfo.myList = [...newUserInfo.myList, selectedMovie[0]];
-      console.log(newUserInfo);
       return {
         ...state,
         userInfo: newUserInfo,
       };
-
+    case "SUGGESTIONS":
+      const suggestions = action.payload;
+      const randomSix = [];
+      for (let i = 0; i < 8; i++) {
+        randomSix.push(
+          suggestions[Math.floor(Math.random() * suggestions.length)]
+        );
+      }
+      let suggestedUserInfo = { ...state.userInfo };
+      suggestedUserInfo.userSuggestions = randomSix;
+      return {
+        ...state,
+        userInfo: suggestedUserInfo,
+      };
     default:
       return state;
   }
@@ -91,6 +106,18 @@ export function ContextProvider(props) {
         }
       });
   }, [state.keyWord]);
+  useEffect(() => {
+    fetch(
+      "https://api.themoviedb.org/3/tv/airing_today?page=1&language=en-US&api_key=61f7ba464304e92aa6c63502caee9834"
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        dispatch({
+          type: "SUGGESTIONS",
+          payload: response.results,
+        });
+      });
+  }, []);
   return (
     <UserContext.Provider value={{ mainState: state, myDispatch: dispatch }}>
       {props.children}
