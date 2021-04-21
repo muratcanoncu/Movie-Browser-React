@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   const context = useContext(UserContext);
+  console.log(context.mainState.userInfo.myList.length);
   const signOutHandler = (dispatch) => {
     dispatch({
       type: "USER_SIGNOUT",
@@ -25,12 +26,17 @@ function NavBar() {
           <h4>About Us</h4>
         </NavLink>
       </div>
-      <h4
-        className="signOut"
-        onClick={() => signOutHandler(context.myDispatch)}
-      >
-        Sign Out
-      </h4>
+      <div className="d-flex align-items-center">
+        <h3 style={{ color: "white" }} className="font-weight-bolder">
+          List {context.mainState.userInfo.myList.length}
+        </h3>
+        <h4
+          className="signOut ml-4"
+          onClick={() => signOutHandler(context.myDispatch)}
+        >
+          Sign Out
+        </h4>
+      </div>
     </nav>
   );
 }

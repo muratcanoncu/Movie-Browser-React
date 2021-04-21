@@ -248,7 +248,7 @@ h2 .dot3 {
   width: 310px;
   height: 420px;
   margin: 30px 50px;
-  box-shadow: 2px 4px 5px white;
+  /* box-shadow: 2px 4px 5px white; */
 }
 .movieCard h5 {
   background: #e50914;
@@ -257,8 +257,8 @@ h2 .dot3 {
 }
 .movieCard:hover {
   /* border: 2px solid white; */
-  box-shadow: 5px 12px 10px white;
-  transition: 0.5s;
+  box-shadow: 3px 5px 5px lightgray;
+  transition: 0.2s;
 }
 .movieCard:active {
   box-shadow: 5px 12px 10px yellow;
@@ -281,9 +281,11 @@ h2 .dot3 {
   height: auto;
   color: white;
 }
-/* .suggestionContainer {
-  height: auto !important;
-} */
+.userProfile h2 {
+  margin-left: 5%;
+  margin-top: 15px;
+  color: #e50914;
+}
 .userProfile h1 {
   /* padding-top: 5%;
   padding-left: 10%; */

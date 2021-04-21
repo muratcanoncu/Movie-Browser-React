@@ -60,9 +60,9 @@ const reducer = (state, action) => {
       const suggestions = action.payload;
       const randomSix = [];
       for (let i = 0; i < 8; i++) {
-        randomSix.push(
-          suggestions[Math.floor(Math.random() * suggestions.length)]
-        );
+        const selectIndex = Math.floor(Math.random() * suggestions.length);
+        randomSix.push(suggestions[selectIndex]);
+        suggestions.splice(selectIndex, 1);
       }
       let suggestedUserInfo = { ...state.userInfo };
       suggestedUserInfo.userSuggestions = randomSix;
