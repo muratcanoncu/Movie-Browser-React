@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   const context = useContext(UserContext);
-  console.log(context.mainState.userInfo.myList.length);
+  // console.log(context.mainState.userInfo.myList.length);
   const signOutHandler = (dispatch) => {
     dispatch({
       type: "USER_SIGNOUT",

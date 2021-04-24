@@ -243,12 +243,10 @@ h2 .dot3 {
 }
 /* movieCard */
 .movieCard {
-  /* border: 1px solid white; */
   cursor: pointer;
   width: 310px;
   height: 420px;
   margin: 30px 50px;
-  /* box-shadow: 2px 4px 5px white; */
 }
 .movieCard h5 {
   background: #e50914;
@@ -256,7 +254,6 @@ h2 .dot3 {
   font-weight: bolder;
 }
 .movieCard:hover {
-  /* border: 2px solid white; */
   box-shadow: 3px 5px 5px lightgray;
   transition: 0.2s;
 }
@@ -265,7 +262,6 @@ h2 .dot3 {
 }
 .movieCard:hover h5 {
   transition: 0.3s;
-  /* background: black; */
   color: white;
 }
 .movieCard:active h5 {
@@ -287,8 +283,6 @@ h2 .dot3 {
   color: #e50914;
 }
 .userProfile h1 {
-  /* padding-top: 5%;
-  padding-left: 10%; */
   padding: 4% 10%;
 }
 .userProfile h3 {
@@ -350,7 +344,7 @@ h2 .dot3 {
   color: white;
 }
 .myList .favListContainer {
-  margin: 10px auto;
+  margin: 0 auto;
   width: 95%;
   display: flex;
   justify-content: center;

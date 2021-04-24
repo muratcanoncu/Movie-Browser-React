@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import UserContext from "../../ContextFolder/ContextProvider";
-import MovieCard from "../MovieContainer/MovieCards/MovieCard";
+import SuggestionCard from "./suggestionCard/suggestionCard";
 function Profile(props) {
   const context = useContext(UserContext);
-  // console.log(context.mainState.userInfo);
+
   return (
     <div className="userProfile">
       <h1>Hello {context.mainState.userInfo.userName}!</h1>
@@ -14,18 +14,18 @@ function Profile(props) {
           margin: "5px auto",
         }}
       ></div>
-      <h2>Our Selection For You</h2>
+      <h2>Our Selection For You:</h2>
       <div className="suggestionContainer w-100 d-flex flex-wrap justify-content-center">
-        {context.mainState.userInfo.userSuggestions.map((suggestion) => {
-          console.log(suggestion);
+        {context.mainState.userInfo.userSuggestions.map((movie) => {
           return (
-            <MovieCard
-              key={suggestion.id}
-              poster={suggestion.poster_path}
-              movieName={suggestion.original_name}
-              plot={suggestion.overview}
-              rate={suggestion.vote_average}
-            ></MovieCard>
+            <SuggestionCard
+              key={movie.id}
+              id={movie.id}
+              poster={movie.poster_path}
+              movieName={movie.original_name}
+              plot={movie.overview}
+              rate={movie.vote_average}
+            ></SuggestionCard>
           );
         })}
       </div>

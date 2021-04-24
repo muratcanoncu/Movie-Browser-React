@@ -7,6 +7,7 @@ function AboutUs() {
     <div className="myList">
       <h1 className="mb-3">Your Favorite Movies:</h1>
       <div
+        className="mb-4"
         style={{
           borderBottom: "2px solid white",
           width: "90%",
@@ -15,12 +16,11 @@ function AboutUs() {
       ></div>
       <div className="favListContainer">
         {context.mainState.userInfo.myList.map((movie) => {
-          console.log(movie);
           return (
             <MovieCard
               key={movie.id}
               poster={movie.poster_path}
-              movieName={movie.original_title}
+              movieName={movie.original_title || movie.original_name}
               plot={movie.overview}
               rate={movie.vote_average}
             ></MovieCard>

@@ -1,6 +1,4 @@
 import React, { useReducer, createContext, useEffect } from "react";
-//! https://api.themoviedb.org/3/search/movie?api_key=4ff32b3a95fabacb861ecfa8aa1dfcba&query=${movieName}
-//! https://image.tmdb.org/t/p/w200/${posterPath}
 const UserContext = createContext();
 const initialState = {
   loaded: false,
@@ -49,12 +47,28 @@ const reducer = (state, action) => {
       const selectedMovie = state.movieData.filter((movie) => {
         return movie.id === action.payload;
       });
-      console.log(selectedMovie[0]);
       let newUserInfo = { ...state.userInfo };
       newUserInfo.myList = [...newUserInfo.myList, selectedMovie[0]];
+      console.log(newUserInfo.myList);
       return {
         ...state,
         userInfo: newUserInfo,
+      };
+    case "ADD_THE_SUGGESTION":
+      const selectedSuggestion = state.userInfo.userSuggestions.filter(
+        (movie) => {
+          return movie.id === action.payload;
+        }
+      );
+      let newUserInfoSuggestions = { ...state.userInfo };
+      newUserInfoSuggestions.myList = [
+        ...newUserInfoSuggestions.myList,
+        selectedSuggestion[0],
+      ];
+      console.log(newUserInfoSuggestions.myList);
+      return {
+        ...state,
+        userInfo: newUserInfoSuggestions,
       };
     case "SUGGESTIONS":
       const suggestions = action.payload;
