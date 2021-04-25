@@ -48,8 +48,13 @@ const reducer = (state, action) => {
         return movie.id === action.payload;
       });
       let newUserInfo = { ...state.userInfo };
-      newUserInfo.myList = [...newUserInfo.myList, selectedMovie[0]];
-      console.log(newUserInfo.myList);
+      let alreadyInList = newUserInfo.myList.includes(selectedMovie[0]);
+      if (!alreadyInList) {
+        newUserInfo.myList = [...newUserInfo.myList, selectedMovie[0]];
+      } else {
+        alert("This movie already in your list !");
+        newUserInfo.myList = [...newUserInfo.myList];
+      }
       return {
         ...state,
         userInfo: newUserInfo,
@@ -61,11 +66,16 @@ const reducer = (state, action) => {
         }
       );
       let newUserInfoSuggestions = { ...state.userInfo };
-      newUserInfoSuggestions.myList = [
-        ...newUserInfoSuggestions.myList,
-        selectedSuggestion[0],
-      ];
-      console.log(newUserInfoSuggestions.myList);
+      let exits = newUserInfoSuggestions.myList.includes(selectedSuggestion[0]);
+      if (!exits) {
+        newUserInfoSuggestions.myList = [
+          ...newUserInfoSuggestions.myList,
+          selectedSuggestion[0],
+        ];
+      } else {
+        alert("This movie already in your list !");
+        newUserInfoSuggestions.myList = [...newUserInfoSuggestions.myList];
+      }
       return {
         ...state,
         userInfo: newUserInfoSuggestions,
