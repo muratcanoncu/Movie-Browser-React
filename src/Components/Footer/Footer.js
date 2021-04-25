@@ -9,7 +9,9 @@ function Footer() {
         <h2>FETCHFLIX</h2>
       </div>
       <div>
-        <a href="#">Contact Us</a>
+        <a href="#/contactus" className="contactUs pt-2">
+          Contact Us
+        </a>
       </div>
     </div>
   );

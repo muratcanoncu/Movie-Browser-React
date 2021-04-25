@@ -14,6 +14,7 @@ import Login from "./Components/Login/Login";
 import UserProfile from "./Components/Profile/Profile";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import MyList from "./Components/MyList/MyListContainer";
+import ContactUs from "./Components/ContactUs/ContactUs";
 function App() {
   const context = useContext(UserContext);
   if (!context.mainState.loaded) {
@@ -47,6 +48,9 @@ function App() {
               </Route>
               <Route path="/aboutus">
                 <AboutUs></AboutUs>
+              </Route>
+              <Route path="/contactus">
+                <ContactUs></ContactUs>
               </Route>
             </Switch>
 
