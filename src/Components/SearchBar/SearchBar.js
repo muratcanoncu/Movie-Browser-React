@@ -14,7 +14,7 @@ function SearchBar() {
   return (
     <form
       id="searchBar"
-      className="d-flex justify-content-center align-items-center w-100"
+      className="d-flex justify-content-center align-items-center"
       onSubmit={(e) => {
         e.preventDefault();
         return sendKeyWord(context.myDispatch);

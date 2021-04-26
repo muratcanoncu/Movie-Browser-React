@@ -6,7 +6,12 @@ function Profile(props) {
 
   return (
     <div className="userProfile">
-      <h1>Hello {context.mainState.userInfo.userName}!</h1>
+      <h1>
+        Hello{" "}
+        <span className="profileUserName">
+          {context.mainState.userInfo.userName} !
+        </span>
+      </h1>
       <div
         style={{
           borderBottom: "2px solid white",

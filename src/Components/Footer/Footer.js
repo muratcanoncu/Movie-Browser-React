@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="d-flex justify-content-center flex-column align-items-center">
         <p className="m-0">© 2021 Fetchflix, Inc</p>
         <a href="#">Terms & Conditions</a>
@@ -13,7 +13,7 @@ function Footer() {
           Contact Us
         </a>
       </div>
-    </div>
+    </footer>
   );
 }
 

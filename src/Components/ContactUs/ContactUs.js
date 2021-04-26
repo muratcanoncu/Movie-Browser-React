@@ -13,7 +13,7 @@ function ContactUs() {
         <input></input>
         <label>Message</label>
         <textarea></textarea>
-        <button>SUBMIT</button>
+        <button disabled>SUBMIT</button>
       </form>
     </div>
   );

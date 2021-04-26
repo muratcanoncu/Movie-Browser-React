@@ -156,9 +156,9 @@ h2 .dot3 {
 .inform {
   color: black;
   font-size: 1.4rem;
-  animation-delay: 0.8s;
+  animation-delay: 0.5s;
   animation-name: informa;
-  animation-duration: 2s;
+  animation-duration: 1.2s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
@@ -282,6 +282,11 @@ h2 .dot3 {
   margin-top: 15px;
   color: #e50914;
 }
+.userProfile h1 .profileUserName {
+  font-size: 5rem !important;
+  margin-left: 30px;
+  color: #e50914;
+}
 .userProfile h1 {
   padding: 4% 10%;
 }
@@ -312,7 +317,7 @@ h2 .dot3 {
   margin-bottom: 10px;
 }
 .aboutUs .container {
-  height: 250px;
+  min-height: 250px;
   text-align: center;
 }
 .container p {
@@ -442,4 +447,48 @@ h2 .dot3 {
   transition: 0.1s;
   color: white !important;
   border-bottom: 2px solid white;
+}
+
+@media only screen and (max-width: 450px) {
+  nav {
+    padding: 0 3px;
+  }
+  nav h1 {
+    font-size: 1.3rem;
+    margin-right: -20px;
+  }
+  nav h3 {
+    font-size: 0.9rem;
+    margin-right: -15px;
+    margin-left: 55px;
+  }
+  .signOut {
+    font-size: 1rem;
+  }
+  nav .middleMenu h4 {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+  .inform {
+    margin-top: 70px !important;
+  }
+  #searchBar {
+    padding: 0 15px;
+  }
+  .contactPage form {
+    height: 550px;
+    width: 80%;
+    border-radius: 15px;
+    border: 2px solid #e50914;
+    box-shadow: 7px 7px 20px #e50914;
+  }
+  .footer {
+    padding: 0 10px;
+  }
+  .footer h2 {
+    font-size: 1.3rem;
+  }
+  .footer a {
+    font-size: 0.8rem;
+  }
 }
