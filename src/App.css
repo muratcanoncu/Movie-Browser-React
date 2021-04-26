@@ -499,11 +499,11 @@ h2 .dot3 {
       top: 150px;
     }
     100% {
-      top: 100px;
+      top: 80px;
     }
   }
   .inform {
-    margin-top: 150px !important;
+    margin-top: 180px !important;
   }
   .login .loginBox {
     width: 90%;
