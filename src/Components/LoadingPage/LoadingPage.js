@@ -6,16 +6,7 @@ function LoadingPage() {
       className="d-flex justify-content-center align-items-center flex-column"
       style={{ width: "100vw", height: "100vh", background: "black" }}
     >
-      <h1
-        style={{
-          color: "#e50914",
-          fontWeight: "bolder",
-          marginBottom: "200px",
-          fontSize: "3.7rem",
-        }}
-      >
-        FETCHFLIX
-      </h1>
+      <h1 className="loadingTitle">FETCHFLIX</h1>
       <h2
         className="loading"
         style={{ color: "#e50914", marginBottom: "300px" }}

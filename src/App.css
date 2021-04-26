@@ -53,7 +53,7 @@ nav .signOut:hover {
   /* border: 1px solid black; */
 }
 #searchBar input {
-  width: 550px;
+  width: 30%;
   height: 45px;
   padding: 3px 6px;
   border: 2px solid black;
@@ -75,6 +75,12 @@ nav .signOut:hover {
   color: white;
 }
 /* loading  */
+.loadingTitle {
+  color: #e50914;
+  font-weight: bolder;
+  margin-bottom: 200px;
+  font-size: 3.7rem;
+}
 .loading {
   font-size: 2.7rem;
   animation-name: loadingWord;
@@ -155,6 +161,7 @@ h2 .dot3 {
 }
 .inform {
   color: black;
+  text-align: center;
   font-size: 1.4rem;
   animation-delay: 0.5s;
   animation-name: informa;
@@ -469,11 +476,36 @@ h2 .dot3 {
     font-size: 1rem;
     margin: 0 10px;
   }
-  .inform {
-    margin-top: 70px !important;
+  .loadingTitle {
+    margin-top: 200px;
+    margin-bottom: 50px;
+    font-size: 3rem;
   }
-  #searchBar {
-    padding: 0 15px;
+  .welcomeToFetchflix {
+    font-size: 2rem;
+  }
+  @keyframes welcomeTitle {
+    0% {
+      top: -150px;
+    }
+    50% {
+      top: 150px;
+    }
+    100% {
+      top: 100px;
+    }
+  }
+  .inform {
+    margin-top: 150px !important;
+  }
+  .login .loginBox {
+    width: 90%;
+  }
+  #searchBar input {
+    width: 70%;
+  }
+  #searchBar button {
+    width: 100px;
   }
   .contactPage form {
     height: 550px;
