@@ -26,7 +26,7 @@ function NavBar() {
           <h4>About Us</h4>
         </NavLink>
       </div>
-      <div className="d-flex align-items-center">
+      <div className="navRight">
         <h3 style={{ color: "white" }} className="font-weight-bolder">
           List {context.mainState.userInfo.myList.length}
         </h3>

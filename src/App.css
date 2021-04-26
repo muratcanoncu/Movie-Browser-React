@@ -14,6 +14,7 @@ nav {
   box-shadow: 3px 3px 15px white;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 nav h1,
 .signOut {
@@ -26,6 +27,9 @@ nav a:hover {
 nav h1:hover {
   cursor: pointer;
   color: tomato;
+}
+nav .navRight {
+  display: flex;
 }
 nav .signOut:hover {
   cursor: pointer;
@@ -458,11 +462,11 @@ h2 .dot3 {
 
 @media only screen and (max-width: 450px) {
   nav {
-    padding: 0 3px;
+    padding: 0 6px;
   }
   nav h1 {
-    font-size: 1.3rem;
-    margin-right: -20px;
+    font-size: 1.2rem;
+    margin-right: -60px;
   }
   nav h3 {
     font-size: 0.9rem;
@@ -475,6 +479,9 @@ h2 .dot3 {
   nav .middleMenu h4 {
     font-size: 1rem;
     margin: 0 10px;
+  }
+  nav .navRight {
+    flex-direction: column;
   }
   .loadingTitle {
     margin-top: 200px;
@@ -506,6 +513,12 @@ h2 .dot3 {
   }
   #searchBar button {
     width: 100px;
+  }
+  .aboutUs h1 {
+    font-size: 3.1rem;
+  }
+  .aboutUs p {
+    margin-bottom: 30px;
   }
   .contactPage form {
     height: 550px;

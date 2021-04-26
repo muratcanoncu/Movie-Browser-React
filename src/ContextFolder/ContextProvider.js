@@ -41,7 +41,12 @@ const reducer = (state, action) => {
         ...state,
         loggedIn: false,
         keyWord: "",
-        userInfo: { userName: "", password: "", myList: [] },
+        userInfo: {
+          userName: "",
+          password: "",
+          myList: [],
+          userSuggestions: [...state.userInfo.userSuggestions],
+        },
       };
     case "ADD_MYLIST":
       const selectedMovie = state.movieData.filter((movie) => {
@@ -106,7 +111,7 @@ export function ContextProvider(props) {
       dispatch({
         type: "PAGE_LOADED",
       });
-    }, 600);
+    }, 400);
   }, []);
   useEffect(() => {
     fetch(
