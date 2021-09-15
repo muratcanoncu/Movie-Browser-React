@@ -5,7 +5,9 @@ function AboutUs() {
   const context = useContext(UserContext);
   return (
     <div className="myList">
-      <h1 className="mb-3">Your Favorite Movies:</h1>
+      <h1 className="mb-3">
+        Your Favorite Movies: {context.mainState.userInfo.myList.length}
+      </h1>
       <div
         className="mb-4"
         style={{
