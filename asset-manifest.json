@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Movie-Browser-React/static/css/main.5ce4d60e.chunk.css",
-    "main.js": "/Movie-Browser-React/static/js/main.e546ab48.chunk.js",
-    "main.js.map": "/Movie-Browser-React/static/js/main.e546ab48.chunk.js.map",
+    "main.js": "/Movie-Browser-React/static/js/main.5af81280.chunk.js",
+    "main.js.map": "/Movie-Browser-React/static/js/main.5af81280.chunk.js.map",
     "runtime-main.js": "/Movie-Browser-React/static/js/runtime-main.6f16869e.js",
     "runtime-main.js.map": "/Movie-Browser-React/static/js/runtime-main.6f16869e.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/Movie-Browser-React/static/css/2.4c97ca4f.chunk.css",
@@ -14,7 +14,7 @@
     "static/css/2.4c97ca4f.chunk.css.map": "/Movie-Browser-React/static/css/2.4c97ca4f.chunk.css.map",
     "static/css/main.5ce4d60e.chunk.css.map": "/Movie-Browser-React/static/css/main.5ce4d60e.chunk.css.map",
     "static/js/2.bef6f158.chunk.js.LICENSE.txt": "/Movie-Browser-React/static/js/2.bef6f158.chunk.js.LICENSE.txt",
-    "static/js/main.e546ab48.chunk.js.LICENSE.txt": "/Movie-Browser-React/static/js/main.e546ab48.chunk.js.LICENSE.txt",
+    "static/js/main.5af81280.chunk.js.LICENSE.txt": "/Movie-Browser-React/static/js/main.5af81280.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Movie-Browser-React/static/media/BgSearch.099fddf2.jpeg",
     "static/media/BillGates.b6ef5e7a.jpg": "/Movie-Browser-React/static/media/BillGates.b6ef5e7a.jpg",
     "static/media/ElonMusk.88257224.jpg": "/Movie-Browser-React/static/media/ElonMusk.88257224.jpg",
@@ -26,6 +26,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.bef6f158.chunk.js",
     "static/css/main.5ce4d60e.chunk.css",
-    "static/js/main.e546ab48.chunk.js"
+    "static/js/main.5af81280.chunk.js"
   ]
 }
