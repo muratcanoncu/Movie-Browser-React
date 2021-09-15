@@ -394,7 +394,7 @@ h2 .dot3 {
 .contactPage {
   background: #0e1111;
   width: 100%;
-  min-height: 841px;
+  min-height: calc(100% - 135px);
   height: auto;
 }
 .contactPage form {
@@ -548,6 +548,11 @@ h2 .dot3 {
   }
   .aboutUs p {
     margin-bottom: 30px;
+  }
+  .userProfile h1 .profileUserName {
+    font-size: 3.2rem !important;
+    margin-left: 30px;
+    color: #e50914;
   }
   .contactPage form {
     height: 550px;
