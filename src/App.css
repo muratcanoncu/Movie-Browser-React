@@ -552,6 +552,7 @@ h2 .dot3 {
   .userProfile h1 .profileUserName {
     font-size: 3.2rem;
     margin-left: 30px;
+    display: block;
     color: #e50914;
   }
   .contactPage form {
