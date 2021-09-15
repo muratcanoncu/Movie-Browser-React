@@ -3,14 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.App {
+  height: 100vh;
+}
 /* NavBar */
 nav {
   background-color: black;
   height: 80px;
   padding-top: 7px;
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 10px;
   box-shadow: 3px 3px 15px white;
   position: sticky;
   top: 0;
@@ -28,8 +30,19 @@ nav h1:hover {
   cursor: pointer;
   color: tomato;
 }
+nav .middleMenu {
+  width: 40%;
+}
 nav .navRight {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .navRight h3 {
+  font-size: 25px;
+}
+nav .navRight .signOut {
+  margin-left: 12px;
 }
 nav .signOut:hover {
   cursor: pointer;
@@ -48,13 +61,13 @@ nav .signOut:hover {
 }
 /* SearchBar */
 #searchBar {
-  width: 100vw;
+  width: 100%;
   background: url(./Components//SearchBar/BgSearch.jpeg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100% 70vh;
   height: 240px;
-  /* border: 1px solid black; */
+  /* border: 10px solid yellow; */
 }
 #searchBar input {
   width: 30%;
@@ -77,6 +90,12 @@ nav .signOut:hover {
 #searchBar button:hover {
   background: #e50914;
   color: white;
+  transition: 0.3s;
+}
+#searchBar button:active {
+  background: white;
+  color: #e50914;
+  /* transition: 0.3s; */
 }
 /* loading  */
 .loadingTitle {
@@ -245,7 +264,7 @@ h2 .dot3 {
 .movieContainer {
   background-color: #0e1111;
   width: 100%;
-  min-height: 601px;
+  min-height: calc(100% - 375px);
   height: auto;
   display: flex;
   justify-content: center;
@@ -273,7 +292,7 @@ h2 .dot3 {
 }
 .movieCard:hover h5 {
   transition: 0.3s;
-  color: white;
+  /* color: white; */
 }
 .movieCard:active h5 {
   transition: 0.2s;
@@ -308,7 +327,7 @@ h2 .dot3 {
 .aboutUs {
   background: #0e1111;
   width: 100%;
-  min-height: 841px;
+  min-height: calc(100% - 135px);
   height: auto;
   display: flex;
   flex-direction: column;
@@ -355,7 +374,7 @@ h2 .dot3 {
 .myList {
   background: #0e1111;
   width: 100%;
-  min-height: 841px;
+  min-height: calc(100% - 135px);
   height: auto;
   color: white;
 }
@@ -468,20 +487,30 @@ h2 .dot3 {
     font-size: 1.2rem;
     margin-right: -60px;
   }
-  nav h3 {
-    font-size: 0.9rem;
-    margin-right: -15px;
-    margin-left: 55px;
+  nav #fetchTitle {
+    width: 150px;
   }
+
   .signOut {
     font-size: 1rem;
   }
+  nav .middleMenu {
+    width: 150px;
+    flex-direction: column;
+    align-items: center;
+  }
   nav .middleMenu h4 {
     font-size: 1rem;
-    margin: 0 10px;
+    margin: 2px 10px;
   }
   nav .navRight {
+    width: 130px;
     flex-direction: column;
+    padding-right: 15px;
+    align-items: flex-end;
+  }
+  nav .navRight h3 {
+    font-size: 15px;
   }
   .loadingTitle {
     margin-top: 200px;

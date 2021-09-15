@@ -19,6 +19,7 @@ function AboutUs() {
           return (
             <MovieCard
               key={movie.id}
+              id={movie.id}
               poster={movie.poster_path}
               movieName={movie.original_title || movie.original_name}
               plot={movie.overview}

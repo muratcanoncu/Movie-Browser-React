@@ -12,10 +12,10 @@ function NavBar() {
   };
   return (
     <nav className="d-flex justify-content-between align-items-center w-100">
-      <NavLink to="/" replace>
+      <NavLink to="/" replace id="fetchTitle">
         <h1>FETCHFLIX</h1>
       </NavLink>
-      <div className="middleMenu d-flex justify-content-between w-25">
+      <div className="middleMenu d-flex justify-content-between">
         <NavLink to="/profile" replace>
           <h4>Profile</h4>
         </NavLink>
@@ -30,12 +30,12 @@ function NavBar() {
         <h3 style={{ color: "white" }} className="font-weight-bolder">
           List {context.mainState.userInfo.myList.length}
         </h3>
-        <h4
-          className="signOut ml-4"
+        <h3
+          className="signOut"
           onClick={() => signOutHandler(context.myDispatch)}
         >
           Sign Out
-        </h4>
+        </h3>
       </div>
     </nav>
   );

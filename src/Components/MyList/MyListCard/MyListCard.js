@@ -3,8 +3,17 @@ import UserContext from "../../../ContextFolder/ContextProvider";
 function MovieCard(props) {
   const context = useContext(UserContext);
   //   console.log(context);
+  const removeFromList = (dispatch) => {
+    dispatch({
+      type: "REMOVE_FROM_LIST",
+      payload: props.id,
+    });
+  };
   return (
-    <div className="movieCard">
+    <div
+      className="movieCard"
+      onClick={() => removeFromList(context.myDispatch)}
+    >
       <img
         src={`https://image.tmdb.org/t/p/w200/${props.poster}`}
         className="w-100"

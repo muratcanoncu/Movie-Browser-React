@@ -1,4 +1,5 @@
 import React, { useReducer, createContext, useEffect } from "react";
+import { Accordion } from "react-bootstrap";
 const UserContext = createContext();
 const initialState = {
   loaded: false,
@@ -98,6 +99,16 @@ const reducer = (state, action) => {
       return {
         ...state,
         userInfo: suggestedUserInfo,
+      };
+    case "REMOVE_FROM_LIST":
+      let removedList = state.userInfo.myList.filter((movie) => {
+        return movie.id !== action.payload;
+      });
+      let updatedUserInfo = { ...state.userInfo };
+      updatedUserInfo.myList = removedList;
+      return {
+        ...state,
+        userInfo: updatedUserInfo,
       };
     default:
       return state;
