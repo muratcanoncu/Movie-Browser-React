@@ -17,6 +17,8 @@ function MovieContainer() {
                 id={movie.id}
                 poster={movie.poster_path}
                 movieName={movie.original_title}
+                vote={movie.vote_average}
+                releaseDate={movie.release_date}
                 plot={movie.overview}
                 rate={movie.vote_average}
               ></MovieCard>

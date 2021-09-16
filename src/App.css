@@ -278,27 +278,42 @@ h2 .dot3 {
   height: 420px;
   margin: 30px 50px;
 }
-.movieCard h5 {
+.movieCard .bottom {
+  background: black;
+}
+.movieCard .bottom h5 {
+  height: 50%;
   background: #e50914;
   color: black;
   font-weight: bolder;
 }
+.movieCard .bottom div p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #e50914;
+}
 .movieCard:hover {
-  box-shadow: 3px 5px 5px lightgray;
+  box-shadow: 3px 5px 5px #ffe4e1;
   transition: 0.2s;
 }
 .movieCard:active {
-  box-shadow: 5px 12px 10px yellow;
+  box-shadow: 5px 12px 10px white;
 }
-.movieCard:hover h5 {
+.movieCard:hover .bottom h5 {
   transition: 0.3s;
   /* color: white; */
 }
-.movieCard:active h5 {
+/* .movieCard:active .bottom h5 {
   transition: 0.2s;
   background: black;
   color: #e50914;
 }
+.movieCard:active .bottom div {
+  background: #e50914;
+}
+.movieCard:active .bottom div p {
+  color: black;
+} */
 /* userProfile */
 .userProfile {
   background: #0e1111;

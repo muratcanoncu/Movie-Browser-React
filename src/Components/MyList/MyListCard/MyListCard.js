@@ -19,12 +19,14 @@ function MovieCard(props) {
         className="w-100"
         style={{ height: "87%" }}
       ></img>
-      <h5
-        className="d-flex justify-content-center align-items-center text-center"
-        style={{ height: "13%" }}
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "13%", background: "#e50914" }}
       >
-        {props.movieName}
-      </h5>
+        <h5 className="d-flex justify-content-center align-items-center text-center mb-0">
+          {props.movieName}
+        </h5>
+      </div>
     </div>
   );
 }
